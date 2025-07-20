@@ -1,0 +1,99 @@
+body {
+    font-family: 'Inter', Arial, sans-serif; /* Use Inter font, fallback to Arial */
+    background-color: #f0f2f5; /* Light grey background for the page */
+    display: flex; /* Use flexbox for centering content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Minimum height of 100% of the viewport height */
+    margin: 0; /* Remove default body margin */
+}
+
+#todo-app {
+    width: 100%; /* Take full width of its container */
+    max-width: 400px; /* Limit maximum width for better readability on large screens */
+    background-color: #ffffff; /* White background for the app container */
+    padding: 20px; /* Padding inside the app container */
+    border-radius: 8px; /* Rounded corners for the app container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    display: flex; /* Use flexbox for the app content */
+    flex-direction: column; /* Stack children vertically */
+    gap: 15px; /* Space between children (h1, input-section, ul) */
+}
+
+h1 {
+    text-align: center; /* Center the heading text */
+    color: #333; /* Dark grey color for the heading */
+    margin-bottom: 15px; /* Space below the heading */
+}
+
+.input-section {
+    display: flex; /* Make the input section a flex container */
+    flex-direction: column; /* Stack input and button vertically */
+    gap: 10px; /* Space between the input and the button */
+    width: 100%; /* Ensure it takes full width within its parent */
+}
+
+#task-input {
+    width: 100%; /* Make input take full width of its container */
+    padding: 12px; /* Padding inside the input field */
+    border: 1px solid #ddd; /* Light grey border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Font size for input text */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+#task-input::placeholder {
+    color: #999; /* Color for placeholder text */
+}
+
+#add-task-btn {
+    width: 100%; /* Make button take full width of its container */
+    padding: 12px 20px; /* Padding inside the button */
+    background-color: #007bff; /* Blue background color */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size for button text */
+    transition: background-color 0.2s ease; /* Smooth transition for hover effect */
+}
+
+#add-task-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+#task-list {
+    list-style: none; /* Remove default bullet points from the list */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Make the list a flex container */
+    flex-direction: column; /* Stack list items vertically */
+    gap: 8px; /* Space between list items */
+}
+
+li {
+    background-color: #eeeeee; /* Light grey background for list items */
+    padding: 10px; /* Padding inside each list item */
+    border-radius: 4px; /* Slightly rounded corners */
+    display: flex; /* Make the li a flex container */
+    justify-content: space-between; /* Distributes space between text and button */
+    align-items: center; /* Vertically aligns items in the middle */
+    word-break: break-word; /* Ensures long words break and wrap */
+}
+
+.remove-btn {
+    cursor: pointer;
+    background-color: #dc3545; /* Red background for remove button */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 5px 10px; /* Padding inside the button */
+    font-size: 14px; /* Smaller font for the button */
+    transition: background-color 0.2s ease; /* Smooth transition for hover effect */
+    flex-shrink: 0; /* Prevent button from shrinking */
+    margin-left: 10px; /* Space between task text and button */
+}
+
+.remove-btn:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
